@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - DaxServerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>DaxServerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.global.dax.server.html">org.global.dax.server</a> &gt; DaxServerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">10</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.093s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testAddCommand()</td>
+<td class="success">0.108s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testAddCommandWithSpacesInValue()</td>
+<td class="success">0.107s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDeleteCommand()</td>
+<td class="success">0.111s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAllCommandEmptyCache()</td>
+<td class="success">0.129s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAllCommandWithKeys()</td>
+<td class="success">0.108s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetCommand()</td>
+<td class="success">0.108s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetCommandNotFound()</td>
+<td class="success">0.105s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testHeartbeatCommand()</td>
+<td class="success">0.108s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInvalidAddCommandFormat()</td>
+<td class="success">0.105s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUnknownCommand()</td>
+<td class="success">0.104s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>NIO Server started on port 7099
+New client connected: /127.0.0.1:51050
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51051
+New client connected: /127.0.0.1:51052
+New client connected: /127.0.0.1:51053
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51054
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51055
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51056
+New client connected: /127.0.0.1:51057
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51058
+New client connected: /127.0.0.1:51059
+New client connected: /127.0.0.1:51060
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51061
+New client connected: /127.0.0.1:51062
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51063
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51064
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51065
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Exception in thread &quot;Thread-3&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-4&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-5&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-6&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-7&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-8&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-9&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-10&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-11&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread &quot;Thread-12&quot; java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at 21 Apr 2025, 14:12:41</p>
+</div>
+</div>
+</body>
+</html>

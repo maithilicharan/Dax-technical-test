@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.global.dax.server.DaxServerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-04-21T13:12:40" hostname="Charans-MacBook-Pro.local" time="1.103">
+  <properties/>
+  <testcase name="testGetAllCommandEmptyCache()" classname="org.global.dax.server.DaxServerTest" time="0.129"/>
+  <testcase name="testDeleteCommand()" classname="org.global.dax.server.DaxServerTest" time="0.111"/>
+  <testcase name="testGetCommandNotFound()" classname="org.global.dax.server.DaxServerTest" time="0.105"/>
+  <testcase name="testUnknownCommand()" classname="org.global.dax.server.DaxServerTest" time="0.104"/>
+  <testcase name="testAddCommandWithSpacesInValue()" classname="org.global.dax.server.DaxServerTest" time="0.107"/>
+  <testcase name="testGetAllCommandWithKeys()" classname="org.global.dax.server.DaxServerTest" time="0.108"/>
+  <testcase name="testGetCommand()" classname="org.global.dax.server.DaxServerTest" time="0.108"/>
+  <testcase name="testHeartbeatCommand()" classname="org.global.dax.server.DaxServerTest" time="0.108"/>
+  <testcase name="testInvalidAddCommandFormat()" classname="org.global.dax.server.DaxServerTest" time="0.105"/>
+  <testcase name="testAddCommand()" classname="org.global.dax.server.DaxServerTest" time="0.108"/>
+  <system-out><![CDATA[NIO Server started on port 7099
+New client connected: /127.0.0.1:51050
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51051
+New client connected: /127.0.0.1:51052
+New client connected: /127.0.0.1:51053
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51054
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51055
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51056
+New client connected: /127.0.0.1:51057
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51058
+New client connected: /127.0.0.1:51059
+New client connected: /127.0.0.1:51060
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51061
+New client connected: /127.0.0.1:51062
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51063
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51064
+NIO Server started on port 7099
+New client connected: /127.0.0.1:51065
+]]></system-out>
+  <system-err><![CDATA[Exception in thread "Thread-3" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-4" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-5" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-6" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-7" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-8" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-9" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-10" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-11" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "Thread-12" java.nio.channels.ClosedSelectorException
+	at java.base/sun.nio.ch.SelectorImpl.ensureOpen(SelectorImpl.java:80)
+	at java.base/sun.nio.ch.SelectorImpl.selectedKeys(SelectorImpl.java:91)
+	at org.global.dax.server.DaxServer.start(DaxServer.java:40)
+	at org.global.dax.server.DaxServerTest.lambda$setUp$0(DaxServerTest.java:23)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]></system-err>
+</testsuite>

@@ -1,0 +1,138 @@
+/**
+ * Apply this first to any project built in java.
+ *
+ * plugins {
+ *     id "as.java-conventions"
+ * }
+ */
+
+plugins {
+    id 'java'
+}
+
+group 'org.global.exchange'
+project.version = "${version}"
+sourceCompatibility = JavaVersion.VERSION_17
+
+tasks.withType(Copy.class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType(Jar.class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+repositories {
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+
+    implementation platform("org.apache.logging.log4j:log4j-bom:${log4jVersion}")
+    implementation "org.apache.logging.log4j:log4j-api"
+    implementation "org.apache.logging.log4j:log4j-core"
+    implementation "org.apache.logging.log4j:log4j-slf4j2-impl"
+   
+    testImplementation platform("org.junit:junit-bom:${junitVersion}")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation "org.junit.jupiter:junit-jupiter-params"
+    testImplementation "org.junit.jupiter:junit-jupiter-api"
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
+    testImplementation "org.assertj:assertj-core:${assertJVersion}"
+    testImplementation "org.awaitility:awaitility:${awaitilityVersion}"
+}
+
+test {
+
+    minHeapSize = "4096m"
+    maxHeapSize = "4096m"
+
+    jvmArgs('--add-opens', 'java.base/sun.nio.ch=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.base/java.util.zip=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.base/jdk.internal.ref=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.base/java.lang=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.management/sun.management=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'jdk.management/com.sun.management.internal=ALL-UNNAMED')
+    jvmArgs('--add-modules', 'java.se')
+
+    // run classes concurrently, but methods within class on same thread
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    forkEvery = 300
+    systemProperty "junit.jupiter.execution.parallel.enabled", "true"
+    systemProperty "junit.jupiter.execution.parallel.mode.default", "same_thread"
+    systemProperty "junit.jupiter.execution.parallel.mode.classes.default", "concurrent"
+
+    useJUnitPlatform {
+        excludeTags 'integration'
+    }
+
+    testLogging {
+        // set options for log level LIFECYCLE
+        events "failed", "passed"
+        exceptionFormat "full"
+
+        // set options for log level DEBUG
+        debug {
+            events "started", "skipped", "failed"
+            exceptionFormat "full"
+        }
+
+        // remove standard output/error logging from --info builds
+        // by assigning only 'failed' and 'skipped' events
+        info.events = ["failed", "skipped"]
+    }
+
+}
+
+task integrationTest(type: Test) {
+
+    group 'verification'
+    useJUnitPlatform {
+        includeTags 'integration'
+    }
+
+    testLogging {
+        // set options for log level LIFECYCLE
+        events "failed", "passed", "standard_error", "standard_out"
+        exceptionFormat "short"
+        showCauses true
+        showExceptions true
+        showStackTraces true
+
+        // set options for log level DEBUG
+        debug {
+            events "started", "skipped", "failed"
+            exceptionFormat "full"
+        }
+
+        // remove standard output/error logging from --info builds
+        // by assigning only 'failed' and 'skipped' events
+        info.events = ["failed", "skipped"]
+    }
+
+    jvmArgs('--add-opens', 'java.base/sun.nio.ch=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.base/java.util.zip=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.base/jdk.internal.ref=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.base/java.lang=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'java.management/sun.management=ALL-UNNAMED')
+    jvmArgs('--add-opens', 'jdk.management/com.sun.management.internal=ALL-UNNAMED')
+    jvmArgs('-Djdk.httpclient.allowRestrictedHeaders=host')
+    jvmArgs('-Djava.net.preferIPv4Stack=true')
+    jvmArgs('--add-modules', 'java.se')
+
+    // run classes concurrently, but methods within class on same thread
+    systemProperty "junit.jupiter.execution.parallel.enabled", "true"
+    systemProperty "junit.jupiter.execution.parallel.mode.default", "same_thread"
+    systemProperty "junit.jupiter.execution.parallel.mode.classes.default", "concurrent"
+
+    minHeapSize = "4096m"
+    maxHeapSize = "4096m"
+
+    check.dependsOn integrationTest
+    mustRunAfter test
+}

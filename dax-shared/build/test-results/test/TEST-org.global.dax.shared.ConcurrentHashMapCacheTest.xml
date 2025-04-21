@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.global.dax.shared.ConcurrentHashMapCacheTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2025-04-21T13:12:39" hostname="Charans-MacBook-Pro.local" time="0.066">
+  <properties/>
+  <testcase name="testGetAllKeysEmptyCache()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.026"/>
+  <testcase name="testSizeEmptyCache()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testPutValueTooLongThrowsException()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.003"/>
+  <testcase name="testClear()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testSize()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testPutValidKeyAndValue()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.003"/>
+  <testcase name="testGetAllKeys()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.002"/>
+  <testcase name="testPutNullValueThrowsException()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.002"/>
+  <testcase name="testPutAndGet()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testGetNonExistentKey()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testPutInvalidKeyLengthThrowsException()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.002"/>
+  <testcase name="testPutNullKeyThrowsException()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testRemoveNonExistentKey()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testRemove()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <testcase name="testGetAllKeysReturnsCopy()" classname="org.global.dax.shared.ConcurrentHashMapCacheTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

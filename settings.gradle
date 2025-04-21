@@ -1,0 +1,5 @@
+rootProject.name = 'dax-technical-test'
+
+include('dax-client',
+        'dax-server',
+        'dax-shared')
