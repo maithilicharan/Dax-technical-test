@@ -1,0 +1,7 @@
+/dax-client/build/
+/dax-shared/build/
+/dax-server/build/
+/buildSrc/.gradle/
+/buildSrc/build/
+/.gradle/
+/.idea/
