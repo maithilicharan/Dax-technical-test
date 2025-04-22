@@ -1,6 +1,7 @@
 ## Server-Side Improvements:
 
 **Improved Parsing**: Employing a more sophisticated parsing strategy, such as regular expressions or a state machine, to handle different command formats, optional arguments.
+
 **Command Processing Layer**: Introduce separate command processing layer to asynchronously receive responses from process heavy workloads. 
 
 ## Cache Optimization:
